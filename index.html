@@ -86,9 +86,26 @@
           </div>
         </div>
       </section>
-      <section>
+
+
+
+      <section id="feedback">
         <!-- sezione feedback - semplice - animazioni = slider -->
+        <img :src="feedback.img" alt="">
+        <div class="feedback_slide" v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
+          <img class="feedback_img" :src="feedback.img" alt="">
+          <p>{{feedback.text}}</p>
+          <span class="feedback_name">{{feedback.name}}</span>
+          <span class="feedback_job">{{feedback.job}}</span>
+        </div>
+        <div class="slider_dots_feedback">
+          <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks"  v-if="feedback.visible"></i>
+          <i class="fas fa-circle" v-else></i>
+        </div>
       </section>
+
+
+      
       <section>
         <!-- sezione learning - media - struttura menu laterale - animazioni = transition -->
       </section>

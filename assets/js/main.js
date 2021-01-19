@@ -94,6 +94,32 @@ let app = new Vue({
       },
     ],
     // 5# FEEDBACK OBJECT-database
+    feedback:{
+      img:'assets/img/h5-parallax-img-1.png',
+      feedbacks:[
+        {
+          visible: true,
+          img:'assets/img/people/testimonials-standard-1.png',
+          text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+          name:'Johan Collins',
+          job:'student',
+        },
+        {
+          visible: false,
+          img:'assets/img/people/testimonials-standard-2.png',
+          text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+          name:'Johan Collins',
+          job:'student',
+        },
+        {
+          visible: false,
+          img:'assets/img/people/testimonials-standard-3.png',
+          text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+          name:'Johan Collins',
+          job:'student',
+        },
+      ],
+    }
     // 6# LEARNING OBJECT-database
     // 7# POPULAR OBJECT-database
     // 8# PICING OBJECT-database
