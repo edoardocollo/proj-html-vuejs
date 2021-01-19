@@ -4,15 +4,17 @@
   box-sizing: border-box;
 }
 
-
+#app{
+  width: 90%;
+  margin: auto;
+  
+}
 /* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
   height: 80px;
-  margin: auto;
   background-color: black;
   color: white;
 }

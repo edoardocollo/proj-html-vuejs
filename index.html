@@ -28,9 +28,20 @@
 
     <main>
 
+
+
       <div class="jumbotron">
         <!-- slider   -->
+        <div class="slide" v-for="slide in jumbotron" v-if="slide.visible">
+          <h2>{{slide.title}}</h2>
+          <p>{{slide.text}}</p>
+          <button v-if="slide.button">{{slide.buttonText}}</button>
+        </div>
       </div>
+
+
+
+
       <section>
         <!-- carosello? card arre tematiche -->
       </section>
