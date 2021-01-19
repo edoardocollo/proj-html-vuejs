@@ -177,7 +177,45 @@ let app = new Vue({
         img:'assets/img/icons/h12-tabs-icon-1.png',
       },
     ],
-    // 7# POPULAR OBJECT-database
+    // 7# POPULAR COURSE OBJECT-database
+    courses:[
+      {
+        img:'assets/img/course/course-5-f-img.jpg',
+        title:'Android Developer',
+        teacher:'David Sanders',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        img:'assets/img/course/course-6-f-img.jpg',
+        title:'Web Designing',
+        teacher:'Jennifer Powell',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        img:'assets/img/course/course-7-f-img.jpg',
+        title:'Financial Modeling',
+        teacher:'Edward Bowman',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'blue',
+          text: '$20'
+        },
+        partecipants: 4,
+        category:'business',
+      },
+    ],
     // 8# PICING OBJECT-database
     // 9# SPONSOR OBJECT-database
     // 10# FOOTER OBJECT-database

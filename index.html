@@ -122,9 +122,26 @@
           <img :src="el.img" alt="">
         </div>
       </section>
-      <section>
+
+
+
+      <section id="courses">
         <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
+        <div class="course_card" v-for="course in courses">
+          <img :src="course.img" alt="">
+          <h3>{{course.title}}</h3>
+          <span>{{course.teacher}}</span>
+          <div class="badge">{{course.badge.color}}</div>
+          <p>{{course.badge.text}}</p>
+          <span>
+            <i class="fas fa-user">{{course.partecipants}}</i>
+            <i class="fas fa-tag">{{course.category}}</i>
+          </span>
+        </div>
       </section>
+
+
+
       <section>
         <!-- sezione pricing - media - struttura griglia - animazioni = active -->
       </section>
