@@ -119,8 +119,58 @@ let app = new Vue({
           job:'student',
         },
       ],
-    }
+    },
     // 6# LEARNING OBJECT-database
+    learning:[
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'What We Do',
+        img:'',
+      },
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'Degree Programme',
+        img:'',
+      },
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'Career Achievements',
+        img:'',
+      },
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'Personal Management',
+        img:'',
+      },
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'Steps To Success',
+        img:'',
+      },
+      {
+        title:'Learning Possibilities',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        tips: true,
+        tipsItem:['lorem','lorem','lorem','lorem'],
+        buttonName: 'Knowledge Transfer',
+        img:'',
+      },
+    ],
     // 7# POPULAR OBJECT-database
     // 8# PICING OBJECT-database
     // 9# SPONSOR OBJECT-database
