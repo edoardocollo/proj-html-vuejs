@@ -14,10 +14,10 @@ let app = new Vue({
       slide1:{
         visible: true,
         title: 'Contemporary Ideas',
-        text: 'blablablablabla',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
         button: true,
         buttonText: 'register now',
-        background: 'path',
+        img: 'assets/img/people/h5-slide-3-background.jpg',
       },
       slide2:{
         visible: false,
@@ -25,7 +25,7 @@ let app = new Vue({
         text: 'blablablablabla',
         button: true,
         buttonText: 'register now',
-        background: 'path',
+        img: 'assets/img/people/h5-slide-3-background.jpg',
       },
       slide3:{
         visible: false,
@@ -33,7 +33,7 @@ let app = new Vue({
         text: 'blablablablabla',
         button: true,
         buttonText: 'register now',
-        background: 'path',
+        img: 'assets/img/people/h5-slide-3-background.jpg',
       },
 
     },

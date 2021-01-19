@@ -7,8 +7,10 @@
 #app{
   width: 90%;
   margin: auto;
-  
+
 }
+
+
 /* HEADER */
 header {
   display: flex;
@@ -33,5 +35,53 @@ header img {
 }
 #header_nav_icons i {
   padding: 10px;
+}
+
+
+/* JUMBOTRON */
+#jumbotron {
+
+}
+.slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slide_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  max-width: 80%;
+  text-align: center;
+  color: white;
+}
+.slide_wrap h2 {
+  font-size: 70px;
+}
+.slide_wrap p {
+  padding: 30px;
+}
+.slide_wrap button {
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #40c4ff;
+  border: none;
+  padding: 15px 30px;
+}
+.slider_dots {
+  position: absolute;
+  bottom: 20px;
+}
+.slider_dots i {
+  color: white;
+  padding: 5px;
+}
+.slider_dots .fa-circle {
+  opacity: .5;
 }
 /* ???????????????????????????????? */

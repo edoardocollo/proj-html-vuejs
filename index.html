@@ -30,15 +30,21 @@
 
 
 
-      <div class="jumbotron">
+      <div id="jumbotron">
         <!-- slider   -->
         <div class="slide" v-for="slide in jumbotron" v-if="slide.visible">
-          <h2>{{slide.title}}</h2>
-          <p>{{slide.text}}</p>
-          <button v-if="slide.button">{{slide.buttonText}}</button>
+          <img :src="slide.img" alt="">
+          <div class="slide_wrap">
+            <h2>{{slide.title}}</h2>
+            <p>{{slide.text}}</p>
+            <button v-if="slide.button">{{slide.buttonText}}</button>
+          </div>
+          <div class="slider_dots">
+            <i class="far fa-dot-circle" v-for="slide in jumbotron" v-if="slide.visible"></i>
+            <i class="fas fa-circle" v-else></i>
+          </div>
         </div>
       </div>
-
 
 
 
