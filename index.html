@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>proj-html-vuejs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,6 +14,15 @@
 
     <header>
       <!-- logo 1 nav -->
+      <img :src="header.logoImg" alt="">
+      <nav id="header_nav">
+        <ul>
+          <li v-for="link in header.links">{{link}}</li>
+        </ul>
+        <div id="header_nav_icons">
+          <i v-for="icon in header.icons" :class="icon"></i>
+        </div>
+      </nav>
     </header>
 
 
