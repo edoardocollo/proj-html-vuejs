@@ -84,4 +84,26 @@ header img {
 .slider_dots .fa-circle {
   opacity: .5;
 }
+
+
+/* TOPICS */
+#topics {
+  display: flex;
+  justify-content: space-between;
+}
+.topic_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  height: 250px;
+  background-color: #f2f8fc;
+}
+.topic_card img {
+  width: 120px;
+  margin: 30px;
+}
+.topic_card span {
+  margin: 30px;
+}
 /* ???????????????????????????????? */
