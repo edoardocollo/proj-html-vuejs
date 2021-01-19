@@ -286,9 +286,47 @@ let app = new Vue({
       'assets/img/partners/h5-client-1.png',
       'assets/img/partners/h5-client-2.png',
       'assets/img/partners/h5-client-1.png',
-
     ],
     // 10# FOOTER OBJECT-database
+    footer:{
+      contacts:{
+        img:'assets/img/logos/logo-light.png',
+        text:'Providing life changing experiences through education. Class that fit your dusy life. Closer to home.',
+        phone:'1-677-124-44227',
+        opening:'Mon -Sat 8.00-18.00',
+      },
+      popularCourses:{
+        title:'Popular Courses',
+        courses:[
+          {
+            course: 'business english',
+            teacher: 'Preston Marshall'
+          },
+          {
+            course: 'social computing',
+            teacher: 'Preston Marshall'
+          },
+          {
+            course: 'learn spanish',
+            teacher: 'jennie king'
+          }
+        ],
+      },
+      supports:{
+        title:'supports',
+        links:[
+          'user dashboard',
+          'contact us',
+          'FAQ',
+          'course offer',
+          'events'
+        ],
+      },
+      flexible:{
+        title: 'flexible learning',
+        img: 'assets/img/footer-img-1.png'
+      }
+    }
 
 
   },

@@ -178,6 +178,39 @@
 
     <footer>
       <!-- 4 colonne con mappa + pedice -->
+      <div class="footer_column">
+        <img :src="footer.contacts.img" alt="">
+        <p>{{footer.contacts.text}}</p>
+        <span>
+          {{footer.contacts.phone}}
+        </span>
+        <span>
+          {{footer.contacts.opening}}
+        </span>
+      </div>
+
+      <div class="footer_column">
+        <h3>{{footer.popularCourses.title}}</h3>
+        <ul>
+          <li v-for="course in footer.popularCourses.courses">
+            <span>{{course.course}}</span>
+            <span>{{course.teacher}}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer_column">
+        <h3>{{footer.supports.title}}</h3>
+        <ul>
+          <li v-for="link in footer.supports.links">{{link}}</li>
+        </ul>
+      </div>
+
+      <div class="footer_column">
+        <h3>{{footer.flexible.title}}</h3>
+        <img :src="footer.flexible.img" alt="">
+      </div>
+
     </footer>
 
 
