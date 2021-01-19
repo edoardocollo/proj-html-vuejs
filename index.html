@@ -106,9 +106,21 @@
 
 
 
-      <section>
+      <section id="learning">
         <!-- sezione learning - media - struttura menu laterale - animazioni = transition -->
-
+        <nav id="learning_nav">
+          <ul>
+            <li v-for="el in learning">{{el.buttonName}}</li>
+          </ul>
+        </nav>
+        <div class="learning_content" v-for="el in learning" v-if="el.visible">
+          <h2>{{el.title}}</h2>
+          <p>{{el.text}}</p>
+          <ul v-if="el.tips">
+            <li v-for="tip in el.tipsItem">{{tip}}</li>
+          </ul>
+          <img :src="el.img" alt="">
+        </div>
       </section>
       <section>
         <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
