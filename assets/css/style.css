@@ -90,6 +90,7 @@ header img {
 #topics {
   display: flex;
   justify-content: space-between;
+  margin: 60px 0;
 }
 .topic_card {
   display: flex;
@@ -105,5 +106,33 @@ header img {
 }
 .topic_card span {
   margin: 30px;
+}
+
+
+/* TRUSTED */
+#trusted {
+  margin: 60px 0;
+}
+.trusted_box {
+  display: flex;
+  flex-direction: column;
+}
+.trusted_box h2 {
+  font-size: 35px;
+  max-width: 480px;
+  margin: 30px 0;
+}
+.trusted_box p {
+  margin: 30px 0;
+}
+.trusted_box a {
+  margin: 30px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #40c4ff;
+}
+.trusted_box img{
+  align-self: center;
+  width: 80%;
 }
 /* ???????????????????????????????? */
