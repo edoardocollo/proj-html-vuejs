@@ -1,10 +1,26 @@
 let app = new Vue({
   el:'#app',
   data:{
-    test:'ciao',
+    // DATABASES
+    /////////////////////////////////////////
+    // 0# HEADER OBJECT-database
+    // 1# JUMBOTRON OBJECT-database
+    // 2# TEMI OBJECT-database
+    // 3# TRUSTED OBJECT-database
+    // 4# EMPOWERING OBJECT-database
+    // 5# FEEDBACK OBJECT-database
+    // 6# LEARNING OBJECT-database
+    // 7# POPULAR OBJECT-database
+    // 8# PICING OBJECT-database
+    // 9# SPONSOR OBJECT-database
+    // 10# FOOTER OBJECT-database
+
+
   },
   methods:{
-
+    ////////////////////////////////////////
+    // ????????????????????????????????
+    /////////////////////////////////////////////
   },
   mounted(){
 
