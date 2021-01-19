@@ -37,7 +37,33 @@ let app = new Vue({
       },
 
     },
-    // 2# TEMI OBJECT-database
+    // 2# TOPIC OBJECT-database
+    topics:[
+      {
+        img:'assets/img/icons/h5-custom-icon-1.png',
+        text:'Languages',
+      },
+      {
+        img:'assets/img/icons/h5-custom-icon-2.png',
+        text:'Software',
+      },
+      {
+        img:'assets/img/icons/h5-custom-icon-3.png',
+        text:'Business',
+      },
+      {
+        img:'assets/img/icons/h5-custom-icon-4.png',
+        text:'Chemestry',
+      },
+      {
+        img:'assets/img/icons/h5-custom-icon-5.png',
+        text:'Science',
+      },
+      {
+        img:'assets/img/icons/h5-custom-icon-6.png',
+        text:'DIY&Craft',
+      }
+    ],
     // 3# TRUSTED OBJECT-database
     // 4# EMPOWERING OBJECT-database
     // 5# FEEDBACK OBJECT-database

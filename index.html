@@ -48,8 +48,12 @@
 
 
 
-      <section>
-        <!-- carosello? card arre tematiche -->
+      <section id="topic">
+        <!-- carosello? card topic -->
+        <div class="topic_card" v-for="topic in topics">
+          <img :src="topic.img" alt="">
+          <span>{{topic.text}}</span>
+        </div>
       </section>
       <section>
         <!-- sezione trusted name - semplice - animazioni? -->
