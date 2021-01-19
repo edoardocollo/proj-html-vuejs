@@ -67,8 +67,24 @@
           <img :src="el.img" alt="">
         </div>
       </section>
-      <section>
+
+
+
+      <section id="empowering">
         <!-- sezione empowering.... - semplice - animazioni = numeri -->
+        <div class="empowering_box" v-for="el in empowering">
+          <img class="empowering_img" :src="el.img" alt="">
+          <div class="empowering_content">
+            <h2>{{el.title}}</h2>
+            <p>{{el.text}}</p>
+            <div class="statistics_wrap">
+              <div class="statistic" v-for="statistic in el.statistics">
+                <span>{{statistic.value}}</span>
+                <span>{{statistic.label}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <!-- sezione feedback - semplice - animazioni = slider -->

@@ -76,6 +76,23 @@ let app = new Vue({
       }
     ],
     // 4# EMPOWERING OBJECT-database
+    empowering:[
+      {
+        title:'Empowering Children to Reach Thei Potential.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        statistics:[
+          {
+            value: 168,
+            label:'User Stories',
+          },
+          {
+            value: 347,
+            label:'Events',
+          }
+        ],
+        img:'assets/img/h5-img-2.jpg',
+      },
+    ],
     // 5# FEEDBACK OBJECT-database
     // 6# LEARNING OBJECT-database
     // 7# POPULAR OBJECT-database
