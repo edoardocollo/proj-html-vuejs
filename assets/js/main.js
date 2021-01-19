@@ -217,7 +217,77 @@ let app = new Vue({
       },
     ],
     // 8# PICING OBJECT-database
-    // 9# SPONSOR OBJECT-database
+    pricing:{
+      prices:[
+        {
+          active: true,
+          type:'Standard',
+          price:'$12',
+          img:'assets/img/price/h5-custom-icon-7.png',
+          courses: 2,
+          days: 15,
+          services:{
+            web: true,
+            human: true,
+            marketing: false,
+            python: false,
+            android: false,
+            english: false,
+          },
+        },
+        {
+          active: false,
+          type:'Professional',
+          price:'$59',
+          img:'assets/img/price/h5-custom-icon-8.png',
+          courses: 4,
+          days: 30,
+          services:{
+            web: true,
+            human: true,
+            marketing: true,
+            python: true,
+            android: false,
+            english: false,
+          },
+        },
+        {
+          active: false,
+          type:'Advance',
+          price:'$88',
+          img:'assets/img/price/h5-custom-icon-9.png',
+          courses: 6,
+          days: 30,
+          services:{
+            web: true,
+            human: true,
+            marketing: true,
+            python: true,
+            android: true,
+            english: true,
+          },
+        }
+      ],
+      index:[
+        'Save up to 40% by paying weekly',
+        'Number of Courses',
+        'Time',
+        'Web Designing',
+        'Human-Centered Design',
+        'Basic Marketing',
+        'Python for Everybody',
+        'Android Developer',
+        'Business English',
+      ]
+    },
+    // 9# PARTNERS OBJECT-database
+    partners:[
+      'assets/img/partners/h5-client-5.png',
+      'assets/img/partners/h5-client-1.png',
+      'assets/img/partners/h5-client-2.png',
+      'assets/img/partners/h5-client-1.png',
+
+    ],
     // 10# FOOTER OBJECT-database
 
 

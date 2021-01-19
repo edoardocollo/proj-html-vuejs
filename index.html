@@ -147,11 +147,30 @@
 
 
 
-      <section>
+      <section id="price">
         <!-- sezione pricing - media - struttura griglia - animazioni = active -->
+        <div class="index_column">
+          <span v-for="el in pricing.index">{{el}}</span>
+        </div>
+        <div class="price_column" v-for="price in pricing.prices">
+          <div class="price_wrap">
+            <img :src="price.img" alt="">
+            <h3>{{price.type}}</h3>
+            <span>{{price.price}}</span>
+          </div>
+          <span>{{price.courses}}</span>
+          <span>{{price.days}}</span>
+          <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
+          <i class="fas fa-times" v-else></i>
+          <span><button>Get it now</button></span>
+        </div>
       </section>
-      <section>
+
+
+
+      <section id="partners">
         <!-- sezione partner - facile - animazioni? -->
+        <img v-for="partner in partners" :src="partner" alt="">
       </section>
 
     </main>
