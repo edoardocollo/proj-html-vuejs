@@ -65,6 +65,16 @@ let app = new Vue({
       }
     ],
     // 3# TRUSTED OBJECT-database
+    trusted:[
+      {
+        visible: true,
+        title:'The Trusted Name for In-Home tutoring.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        link: true,
+        linkText: 'learn more',
+        img:'assets/img/h5-img-1.jpg',
+      }
+    ],
     // 4# EMPOWERING OBJECT-database
     // 5# FEEDBACK OBJECT-database
     // 6# LEARNING OBJECT-database

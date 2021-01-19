@@ -55,8 +55,17 @@
           <span>{{topic.text}}</span>
         </div>
       </section>
-      <section>
+
+
+
+      <section id="trusted">
         <!-- sezione trusted name - semplice - animazioni? -->
+        <div class="trusted_box" v-for="el in trusted">
+          <h2>{{el.title}}</h2>
+          <p>{{el.text}}</p>
+          <a href="" v-if="el.link">{{el.linkText}}</a>
+          <img :src="el.img" alt="">
+        </div>
       </section>
       <section>
         <!-- sezione empowering.... - semplice - animazioni = numeri -->
