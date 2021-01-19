@@ -204,7 +204,7 @@ let app = new Vue({
         category:'programming',
       },
       {
-        img:'assets/img/course/course-7-f-img.jpg',
+        img:'assets/img/course/course-12-f-img.jpg',
         title:'Financial Modeling',
         teacher:'Edward Bowman',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
