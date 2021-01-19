@@ -7,7 +7,29 @@
 
 /* HEADER */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 80px;
+  margin: auto;
   background-color: black;
   color: white;
+}
+header img {
+  height: 40px;
+}
+#header_nav {
+  display: flex;
+}
+#header_nav ul {
+  display: flex;
+  list-style: none;
+}
+#header_nav ul li {
+  padding: 10px;
+}
+#header_nav_icons i {
+  padding: 10px;
 }
 /* ???????????????????????????????? */
