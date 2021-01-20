@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>proj-html-vuejs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;800;900&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <div id="app">
     <div class="container">
@@ -98,7 +102,7 @@
             <span class="feedback_job">{{feedback.job}}</span>
           </div>
           <div class="slider_dots_feedback">
-            <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks"  v-if="feedback.visible"></i>
+            <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks" v-if="feedback.visible"></i>
             <i class="fas fa-circle" v-else></i>
           </div>
         </section>
@@ -135,7 +139,7 @@
                 <h3>{{course.title}}</h3>
                 <div class="course_badge" :class="`badge_${course.badge.color}`">{{course.badge.text}}</div>
               </div>
-              <span>{{course.teacher}}</span>
+              <span class="teacher">{{course.teacher}}</span>
               <p>{{course.text}}</p>
               <span class="card_footer">
                 <i class="fas fa-user"> {{course.partecipants}}</i>
@@ -168,10 +172,12 @@
         </section>
 
 
-
         <section id="partners">
           <!-- sezione partner - facile - animazioni? -->
-          <img v-for="partner in partners" :src="partner" alt="">
+          <div id="partners_wrap">
+
+            <img v-for="partner in partners" :src="partner" alt="">
+          </div>
         </section>
 
 
@@ -180,39 +186,56 @@
 
       <footer>
         <!-- 4 colonne con mappa + pedice -->
-        <div class="footer_column">
-          <img :src="footer.contacts.img" alt="">
-          <p>{{footer.contacts.text}}</p>
+        <div id="footer_wrap">
+
+
+          <div class="footer_column">
+            <img :src="footer.contacts.img" alt="">
+            <p>{{footer.contacts.text}}</p>
+            <span>
+              {{footer.contacts.phone}}
+            </span>
+            <span>
+              {{footer.contacts.opening}}
+            </span>
+          </div>
+
+          <div class="footer_column">
+            <h3>{{footer.popularCourses.title}}</h3>
+            <ul>
+              <li v-for="course in footer.popularCourses.courses">
+                <span>{{course.course}}</span><br>
+                <span>{{course.teacher}}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer_column">
+            <h3>{{footer.supports.title}}</h3>
+            <ul>
+              <li v-for="link in footer.supports.links">{{link}}</li>
+            </ul>
+          </div>
+
+          <div class="footer_column">
+            <h3>{{footer.flexible.title}}</h3>
+            <img :src="footer.flexible.img" alt="">
+          </div>
+
+
+        </div>
+        <hr>
+        <div id="footer_bottom_box">
           <span>
-            {{footer.contacts.phone}}
+            Copyright 2017 ©Mikado Themes
           </span>
           <span>
-            {{footer.contacts.opening}}
+            CALL +44 300 303 0266 <a href="">Follow us</a>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
           </span>
         </div>
-
-        <div class="footer_column">
-          <h3>{{footer.popularCourses.title}}</h3>
-          <ul>
-            <li v-for="course in footer.popularCourses.courses">
-              <span>{{course.course}}</span>
-              <span>{{course.teacher}}</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer_column">
-          <h3>{{footer.supports.title}}</h3>
-          <ul>
-            <li v-for="link in footer.supports.links">{{link}}</li>
-          </ul>
-        </div>
-
-        <div class="footer_column">
-          <h3>{{footer.flexible.title}}</h3>
-          <img :src="footer.flexible.img" alt="">
-        </div>
-
       </footer>
 
 
@@ -226,4 +249,5 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="assets/js/main.js" charset="utf-8"></script>
 </body>
+
 </html>

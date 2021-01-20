@@ -127,7 +127,12 @@ let app = new Vue({
         title:'Learning Possibilities',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
         tips: true,
-        tipsItem:['lorem','lorem','lorem','lorem'],
+        tipsItem:[
+          'Lorem ipsum dolor sit amet, consectetur adipisicing ',
+          'Lorem ipsum dolor sit amet, ',
+          'Lorem ipsum dolor sit amet, consectetur ',
+          'Lorem ipsum '
+        ],
         buttonName: 'What We Do',
         img:'assets/img/icons/h12-tabs-icon-1.png',
       },

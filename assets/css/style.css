@@ -7,9 +7,9 @@
 #app{
   width: 1200px;
   margin: auto;
-
+  color: #303030;
+  font-size: 18px;
 }
-
 
 /* HEADER */
 header {
@@ -114,6 +114,7 @@ main{
   justify-content: center;
   width: 140px;
   height: 185px;
+  font-weight: 600;
   background-color: #f2f8fc;
   border: 1px solid #f2f2f2;
 }
@@ -129,6 +130,7 @@ main{
 /* TRUSTED */
 #trusted {
   margin: 100px 0;
+  color: #595959;
 }
 .trusted_box {
   position: relative;
@@ -139,6 +141,7 @@ main{
 .trusted_box h2 {
   font-size: 35px;
   max-width: 480px;
+  color: #303030;
 }
 .trusted_box p {
   margin: 30px 0;
@@ -159,6 +162,8 @@ main{
 
 /* EMPOWERING */
 #empowering {
+  color: #595959;
+
 }
 .empowering_box {
   display: flex;
@@ -173,7 +178,7 @@ main{
   font-size: 35px;
   max-width: 480px;
   margin: 30px 0;
-
+  color: #303030;
 }
 .empowering_content p{
   max-width: 500px;
@@ -256,6 +261,7 @@ main{
 /* LEARNING */
 #learning {
   margin: 60px 0;
+  color: #847b7b;
 }
 #learning_wrap {
   height: 750px;
@@ -282,6 +288,7 @@ main{
 .learning_content h2{
   font-size: 35px;
   margin: 30px 0;
+  color: #303030;
 }
 .learning_content p{
   margin: 30px 0;
@@ -323,6 +330,12 @@ main{
   flex-direction: column;
   padding: 10px;
 }
+.course_card_content p {
+  color: #808080;
+}
+.teacher {
+  color: #b9b9b9;
+}
 .course_wrap {
   display: flex;
   justify-content: space-between;
@@ -359,6 +372,7 @@ main{
 #price {
   display: flex;
   margin: 60px 0;
+  color: #808080;
 }
 .index_column,
 .price_column {
@@ -376,6 +390,8 @@ main{
   height: 250px;
   background-color: #f7fdff;
   border: 1px solid #f2f2f2;
+  color: #3e3e3e;
+  border-top: 4px solid #d6f2ff;
 }
 .price_wrap h3 {
   padding: 15px;
@@ -410,8 +426,12 @@ main{
 }
 
 .index_column > span:first-child {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   height: 250px;
+  color: #3e3e3e;
+  border-top: 4px solid #d6f2ff;
 }
 .price_button_span {
   background-color: #f7fdff;
@@ -423,37 +443,73 @@ main{
   padding: 13px 40px;
   text-transform: uppercase;
   font-weight: 600;
+  color: #808080;
+
 }
 
 
 /* PARTNERS */
 #partners {
   display: flex;
-  justify-content: space-between;
-}
-#partners img {
-  width: 30%;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
 
 /* FOOTER */
 footer {
-  display: flex;
+  height: 580px;
   color: white;
-  background-color: black;
+  background-color: #222222;
+  padding: 80px 40px 60px;
+  color: #cecece;
+}
+#footer_wrap{
+  display: flex;
+  margin-bottom: 60px;
 }
 .footer_column {
-  width: 24%;
+  width: 25%;
   display: flex;
   flex-direction: column;
+  text-transform: capitalize;
+}
+.footer_column p {
+  max-width: 200px;
 }
 .footer_column ul {
   list-style: none;
 }
+.footer_column > * {
+  margin-bottom: 30px;
+}
+.footer_column > * > * {
+  margin-bottom: 30px;
+}
+.footer_column h3 {
+  color: white;
+}
 .footer_column:first-child img {
-  width: 200px;
+  width: 140px;
 }
 .footer_column:last-child img {
-  width: 300px;
+  width: 250px;
+}
+.footer_column:last-child {
+  text-align: center;
+}
+#footer_bottom_box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 13px;
+}
+#footer_bottom_box span:last-child {
+  text-transform: uppercase;
+}
+#footer_bottom_box span:last-child a {
+  text-decoration: none;
+  color: #cecece;
 }
 /* ???????????????????????????????? */
