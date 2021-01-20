@@ -42,10 +42,9 @@
           </div>
         </div>
       </div>
+
+
       <main>
-
-
-
 
 
         <section id="topics">
@@ -108,18 +107,20 @@
 
         <section id="learning">
           <!-- sezione learning - media - struttura menu laterale - animazioni = transition -->
-          <nav id="learning_nav">
-            <ul>
-              <li v-for="el in learning">{{el.buttonName}}</li>
-            </ul>
-          </nav>
-          <div class="learning_content" v-for="el in learning" v-if="el.visible">
-            <h2>{{el.title}}</h2>
-            <p>{{el.text}}</p>
-            <ul v-if="el.tips">
-              <li v-for="tip in el.tipsItem">{{tip}}</li>
-            </ul>
-            <img :src="el.img" alt="">
+          <div id="learning_wrap">
+            <nav id="learning_nav">
+              <ul>
+                <li v-for="el in learning">{{el.buttonName}}</li>
+              </ul>
+            </nav>
+            <div class="learning_content" v-for="el in learning" v-if="el.visible">
+              <h2>{{el.title}}</h2>
+              <p>{{el.text}}</p>
+              <ul v-if="el.tips">
+                <li v-for="tip in el.tipsItem"><i class="fas fa-check"></i>{{tip}}</li>
+              </ul>
+              <img :src="el.img" alt="">
+            </div>
           </div>
         </section>
 
@@ -136,9 +137,9 @@
               </div>
               <span>{{course.teacher}}</span>
               <p>{{course.text}}</p>
-              <span>
-                <i class="fas fa-user">{{course.partecipants}}</i>
-                <i class="fas fa-tag">{{course.category}}</i>
+              <span class="card_footer">
+                <i class="fas fa-user"> {{course.partecipants}}</i>
+                <i class="fas fa-tag"> {{course.category}}</i>
               </span>
             </div>
           </div>
@@ -162,7 +163,7 @@
             <span>{{price.days}}</span>
             <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
             <i class="fas fa-times" v-else></i>
-            <span><button>Get it now</button></span>
+            <span class="price_button_span"><button class="price_button">Get it now</button></span>
           </div>
         </section>
 

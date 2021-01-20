@@ -159,10 +159,11 @@ main{
 
 /* EMPOWERING */
 #empowering {
-  margin: 60px 0;
 }
 .empowering_box {
   display: flex;
+  height: 400px;
+
 }
 .empowering_content {
   display: flex;
@@ -180,11 +181,11 @@ main{
 
 }
 .empowering_img{
-  width: 55%;
 }
 .statistics_wrap {
   display: flex;
   justify-content: space-between;
+  width: 300px;
 }
 .statistic {
   display: flex;
@@ -201,10 +202,16 @@ main{
 /* FEEDBACK */
 #feedback {
   position: relative;
+  height: 550px;
   margin: 60px 0;
+  overflow: hidden;
 }
 #feedback > img {
-  width: 100%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180%;
 }
 .feedback_slide {
   position: absolute;
@@ -218,55 +225,62 @@ main{
   color: white;
 }
 .feedback_img {
-  height: 150px;
-  margin: 60px;
+  height: 120px;
 }
 .feedback_slide p {
-  margin: 60px 0;
+  margin: 30px 0;
 }
 .feedback_slide span {
   margin: 10px 0;
 }
 .feedback_name{
   font-weight: 600;
-  font-size: 22px;
+  font-size: 18px;
 }
 .feedback_job{
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
 }
 .slider_dots_feedback {
   position: absolute;
-  bottom: 30px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
 }
-
+.slider_dots_feedback i {
+  margin: 5px;
+}
 
 /* LEARNING */
 #learning {
-  display: flex;
   margin: 60px 0;
 }
+#learning_wrap {
+  height: 750px;
+  display: flex;
+  align-items: center;
+}
 #learning_nav {
-  width: 30%;
+  width: 70%;
 }
 #learning_nav ul {
   list-style: none;
 }
 #learning_nav ul li {
-  border: 1px solid black;
-  line-height: 60px;
-  padding-left: 20px
+  border: 1px solid #e5e5e5;
+  line-height: 80px;
+  padding-left: 20px;
+  font-weight: 600;
+
 }
 .learning_content {
   position: relative;
   padding: 0 60px;
 }
 .learning_content h2{
-  font-size: 30px;
+  font-size: 35px;
   margin: 30px 0;
 }
 .learning_content p{
@@ -274,13 +288,19 @@ main{
 }
 .learning_content ul{
   list-style: none;
+  margin-bottom: 100px;
 }
 .learning_content ul li{
   line-height: 40px;
 }
+.learning_content ul li i{
+  color: #40c4ff;
+  margin: 10px;
+}
 .learning_content img {
   position: absolute;
-  right: 10%;
+  height: 200px;
+  right: 20%;
   bottom: 0;
 }
 
@@ -292,8 +312,8 @@ main{
   margin: 60px 0;
 }
 .course_card {
-  width: 32.5%;
-  border: 1px solid black;
+  width: 32%;
+  border: 1px solid #f2f2f2;
 }
 .course_card img {
   width: 100%;
@@ -309,17 +329,29 @@ main{
   align-items: center;
 }
 .course_badge{
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
   padding: 3px 12px;
   border-radius: 12px;
 }
 .badge_yellow {
-  background-color: yellow;
+  background-color: #ffd740;
 }
 .badge_blue {
-  background-color: blue;
+  background-color: #40c4ff;
 }
 .course_card_content p {
   margin: 20px 0;
+}
+.card_footer {
+  color: #b9b9b9;
+}
+.card_footer i {
+  margin: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 
@@ -336,30 +368,61 @@ main{
   width: 25%;
 }
 .price_wrap {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 250px;
-  border: 1px solid black;
+  background-color: #f7fdff;
+  border: 1px solid #f2f2f2;
+}
+.price_wrap h3 {
+  padding: 15px;
+}
+.price_wrap span {
+  font-weight: 600;
 }
 .price_column img {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .price_column i {
   width: 100%;
   text-align: center;
   line-height: 60px;
-  border: 1px solid black;
+  border: 1px solid #f2f2f2;
+}
+.price_column .fa-check {
+  color: #40c4ff;
 }
 .index_column > span,
 .price_column > span {
   width: 100%;
   line-height: 60px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #f2f2f2;
 }
+.index_column span {
+  font-weight: 600;
+  text-align: left;
+  padding: 0 20px;
+}
+
 .index_column > span:first-child {
+  font-size: 30px;
   height: 250px;
+}
+.price_button_span {
+  background-color: #f7fdff;
+}
+.price_button {
+  border: 3px solid #eaebeb;
+  border-radius: 0;
+  background-color: white;
+  padding: 13px 40px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 
