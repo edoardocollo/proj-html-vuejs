@@ -10,24 +10,21 @@
 </head>
 <body>
   <div id="app">
+    <div class="container">
 
 
-    <header>
-      <!-- logo 1 nav -->
-      <img :src="header.logoImg" alt="">
-      <nav id="header_nav">
-        <ul>
-          <li v-for="link in header.links">{{link}}</li>
-        </ul>
-        <div id="header_nav_icons">
-          <i v-for="icon in header.icons" :class="icon"></i>
-        </div>
-      </nav>
-    </header>
-
-
-    <main>
-
+      <header>
+        <!-- logo 1 nav -->
+        <img :src="header.logoImg" alt="">
+        <nav id="header_nav">
+          <ul>
+            <li v-for="link in header.links">{{link}}</li>
+          </ul>
+          <div id="header_nav_icons">
+            <i v-for="icon in header.icons" :class="icon"></i>
+          </div>
+        </nav>
+      </header>
 
 
       <div id="jumbotron">
@@ -45,176 +42,180 @@
           </div>
         </div>
       </div>
+      <main>
 
 
 
-      <section id="topics">
-        <!-- carosello? card topic -->
-        <div class="topic_card" v-for="topic in topics">
-          <img :src="topic.img" alt="">
-          <span>{{topic.text}}</span>
-        </div>
-      </section>
+
+
+        <section id="topics">
+          <!-- carosello? card topic -->
+          <div class="topic_card" v-for="topic in topics">
+            <img :src="topic.img" alt="">
+            <span>{{topic.text}}</span>
+          </div>
+        </section>
 
 
 
-      <section id="trusted">
-        <!-- sezione trusted name - semplice - animazioni? -->
-        <div class="trusted_box" v-for="el in trusted">
-          <h2>{{el.title}}</h2>
-          <p>{{el.text}}</p>
-          <a href="" v-if="el.link">{{el.linkText}}</a>
-          <img :src="el.img" alt="">
-        </div>
-      </section>
-
-
-
-      <section id="empowering">
-        <!-- sezione empowering.... - semplice - animazioni = numeri -->
-        <div class="empowering_box" v-for="el in empowering">
-          <img class="empowering_img" :src="el.img" alt="">
-          <div class="empowering_content">
+        <section id="trusted">
+          <!-- sezione trusted name - semplice - animazioni? -->
+          <div class="trusted_box" v-for="el in trusted">
             <h2>{{el.title}}</h2>
             <p>{{el.text}}</p>
-            <div class="statistics_wrap">
-              <div class="statistic" v-for="statistic in el.statistics">
-                <span>{{statistic.value}}</span>
-                <span>{{statistic.label}}</span>
+            <a href="" v-if="el.link">{{el.linkText}}</a>
+            <img :src="el.img" alt="">
+          </div>
+        </section>
+
+
+
+        <section id="empowering">
+          <!-- sezione empowering.... - semplice - animazioni = numeri -->
+          <div class="empowering_box" v-for="el in empowering">
+            <img class="empowering_img" :src="el.img" alt="">
+            <div class="empowering_content">
+              <h2>{{el.title}}</h2>
+              <p>{{el.text}}</p>
+              <div class="statistics_wrap">
+                <div class="statistic" v-for="statistic in el.statistics">
+                  <span>{{statistic.value}}</span>
+                  <span>{{statistic.label}}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
 
 
-      <section id="feedback">
-        <!-- sezione feedback - semplice - animazioni = slider -->
-        <img :src="feedback.img" alt="">
-        <div class="feedback_slide" v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
-          <img class="feedback_img" :src="feedback.img" alt="">
-          <p>{{feedback.text}}</p>
-          <span class="feedback_name">{{feedback.name}}</span>
-          <span class="feedback_job">{{feedback.job}}</span>
-        </div>
-        <div class="slider_dots_feedback">
-          <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks"  v-if="feedback.visible"></i>
-          <i class="fas fa-circle" v-else></i>
-        </div>
-      </section>
+        <section id="feedback">
+          <!-- sezione feedback - semplice - animazioni = slider -->
+          <img :src="feedback.img" alt="">
+          <div class="feedback_slide" v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
+            <img class="feedback_img" :src="feedback.img" alt="">
+            <p>{{feedback.text}}</p>
+            <span class="feedback_name">{{feedback.name}}</span>
+            <span class="feedback_job">{{feedback.job}}</span>
+          </div>
+          <div class="slider_dots_feedback">
+            <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks"  v-if="feedback.visible"></i>
+            <i class="fas fa-circle" v-else></i>
+          </div>
+        </section>
 
 
 
-      <section id="learning">
-        <!-- sezione learning - media - struttura menu laterale - animazioni = transition -->
-        <nav id="learning_nav">
-          <ul>
-            <li v-for="el in learning">{{el.buttonName}}</li>
-          </ul>
-        </nav>
-        <div class="learning_content" v-for="el in learning" v-if="el.visible">
-          <h2>{{el.title}}</h2>
-          <p>{{el.text}}</p>
-          <ul v-if="el.tips">
-            <li v-for="tip in el.tipsItem">{{tip}}</li>
-          </ul>
-          <img :src="el.img" alt="">
-        </div>
-      </section>
+        <section id="learning">
+          <!-- sezione learning - media - struttura menu laterale - animazioni = transition -->
+          <nav id="learning_nav">
+            <ul>
+              <li v-for="el in learning">{{el.buttonName}}</li>
+            </ul>
+          </nav>
+          <div class="learning_content" v-for="el in learning" v-if="el.visible">
+            <h2>{{el.title}}</h2>
+            <p>{{el.text}}</p>
+            <ul v-if="el.tips">
+              <li v-for="tip in el.tipsItem">{{tip}}</li>
+            </ul>
+            <img :src="el.img" alt="">
+          </div>
+        </section>
 
 
 
-      <section id="courses">
-        <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
-        <div class="course_card" v-for="course in courses">
-          <img :src="course.img" alt="">
-          <div class="course_card_content">
-            <div class="course_wrap">
-              <h3>{{course.title}}</h3>
-              <div class="course_badge" :class="`badge_${course.badge.color}`">{{course.badge.text}}</div>
+        <section id="courses">
+          <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
+          <div class="course_card" v-for="course in courses">
+            <img :src="course.img" alt="">
+            <div class="course_card_content">
+              <div class="course_wrap">
+                <h3>{{course.title}}</h3>
+                <div class="course_badge" :class="`badge_${course.badge.color}`">{{course.badge.text}}</div>
+              </div>
+              <span>{{course.teacher}}</span>
+              <p>{{course.text}}</p>
+              <span>
+                <i class="fas fa-user">{{course.partecipants}}</i>
+                <i class="fas fa-tag">{{course.category}}</i>
+              </span>
             </div>
-            <span>{{course.teacher}}</span>
-            <p>{{course.text}}</p>
-            <span>
-              <i class="fas fa-user">{{course.partecipants}}</i>
-              <i class="fas fa-tag">{{course.category}}</i>
-            </span>
           </div>
-        </div>
-        <!-- CREARE PALLINI INDICE -->
-      </section>
+          <!-- CREARE PALLINI INDICE -->
+        </section>
 
 
 
-      <section id="price">
-        <!-- sezione pricing - media - struttura griglia - animazioni = active -->
-        <div class="index_column">
-          <span v-for="el in pricing.index">{{el}}</span>
-        </div>
-        <div class="price_column" v-for="price in pricing.prices">
-          <div class="price_wrap">
-            <img :src="price.img" alt="">
-            <h3>{{price.type}}</h3>
-            <span>{{price.price}}</span>
+        <section id="price">
+          <!-- sezione pricing - media - struttura griglia - animazioni = active -->
+          <div class="index_column">
+            <span v-for="el in pricing.index">{{el}}</span>
           </div>
-          <span>{{price.courses}}</span>
-          <span>{{price.days}}</span>
-          <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
-          <i class="fas fa-times" v-else></i>
-          <span><button>Get it now</button></span>
+          <div class="price_column" v-for="price in pricing.prices">
+            <div class="price_wrap">
+              <img :src="price.img" alt="">
+              <h3>{{price.type}}</h3>
+              <span>{{price.price}}</span>
+            </div>
+            <span>{{price.courses}}</span>
+            <span>{{price.days}}</span>
+            <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
+            <i class="fas fa-times" v-else></i>
+            <span><button>Get it now</button></span>
+          </div>
+        </section>
+
+
+
+        <section id="partners">
+          <!-- sezione partner - facile - animazioni? -->
+          <img v-for="partner in partners" :src="partner" alt="">
+        </section>
+
+
+      </main>
+
+
+      <footer>
+        <!-- 4 colonne con mappa + pedice -->
+        <div class="footer_column">
+          <img :src="footer.contacts.img" alt="">
+          <p>{{footer.contacts.text}}</p>
+          <span>
+            {{footer.contacts.phone}}
+          </span>
+          <span>
+            {{footer.contacts.opening}}
+          </span>
         </div>
-      </section>
+
+        <div class="footer_column">
+          <h3>{{footer.popularCourses.title}}</h3>
+          <ul>
+            <li v-for="course in footer.popularCourses.courses">
+              <span>{{course.course}}</span>
+              <span>{{course.teacher}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer_column">
+          <h3>{{footer.supports.title}}</h3>
+          <ul>
+            <li v-for="link in footer.supports.links">{{link}}</li>
+          </ul>
+        </div>
+
+        <div class="footer_column">
+          <h3>{{footer.flexible.title}}</h3>
+          <img :src="footer.flexible.img" alt="">
+        </div>
+
+      </footer>
 
 
-
-      <section id="partners">
-        <!-- sezione partner - facile - animazioni? -->
-        <img v-for="partner in partners" :src="partner" alt="">
-      </section>
-
-    </main>
-
-
-    <footer>
-      <!-- 4 colonne con mappa + pedice -->
-      <div class="footer_column">
-        <img :src="footer.contacts.img" alt="">
-        <p>{{footer.contacts.text}}</p>
-        <span>
-          {{footer.contacts.phone}}
-        </span>
-        <span>
-          {{footer.contacts.opening}}
-        </span>
-      </div>
-
-      <div class="footer_column">
-        <h3>{{footer.popularCourses.title}}</h3>
-        <ul>
-          <li v-for="course in footer.popularCourses.courses">
-            <span>{{course.course}}</span>
-            <span>{{course.teacher}}</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer_column">
-        <h3>{{footer.supports.title}}</h3>
-        <ul>
-          <li v-for="link in footer.supports.links">{{link}}</li>
-        </ul>
-      </div>
-
-      <div class="footer_column">
-        <h3>{{footer.flexible.title}}</h3>
-        <img :src="footer.flexible.img" alt="">
-      </div>
-
-    </footer>
-
-
-
+    </div>
   </div>
 
 
