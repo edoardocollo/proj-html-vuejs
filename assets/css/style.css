@@ -67,7 +67,6 @@ header img {
 #jumbotron {
   height: 680px;
   overflow: hidden;
-  z-index: 1000;
   list-style: none;
 }
 #jumbotron img {
@@ -349,6 +348,7 @@ header img {
   margin: 60px 40px;
 }
 .course_card_wrap {
+  list-style: none;
   display: flex;
   justify-content: space-between;
 }
@@ -597,9 +597,16 @@ footer {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 5s;
+  transition: all .5s linear;
 }
 .slide-enter,
-.list-leave-to {
+.slide-leave-to {
   opacity : 0;
+}
+.slide_course-enter-active
+ {
+  transition: all 1s;
+}
+.slide_course-enter{
+  opacity:0;
 }

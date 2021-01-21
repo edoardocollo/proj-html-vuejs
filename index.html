@@ -33,11 +33,11 @@
       </header>
 
 
-      <transition-group name="slide" tag="ul" id="jumbotron" @mouseleave="carouselJumbotron()" @mouseenter="stopCarouselJumbotron">
+      <transition-group name="slide" tag="ul" id="jumbotron" >
         <!-- <div class="screen">
 
         </div> -->
-        <li class="slide" v-for="slide in jumbotron" v-bind:key="slide" v-if="slide.visible" >
+        <li class="slide" v-for="slide in jumbotron" v-bind:key="slide.id" v-if="slide.visible" @mouseleave="carouselJumbotron()" @mouseenter="stopCarouselJumbotron()">
           <img class="slide_img" :src="slide.img" alt="">
           <div class="slide_wrap">
             <h2>{{slide.title}}</h2>
@@ -45,8 +45,8 @@
             <button v-if="slide.button">{{slide.buttonText}}</button>
           </div>
           <div class="slider_dots">
-            <i class="far fa-dot-circle" v-for="slide in jumbotron" v-if="slide.visible"></i>
-            <i class="fas fa-circle" v-else></i>
+            <i class="far fa-dot-circle" v-for="(slide, i) in jumbotron" v-if="slide.visible"></i>
+            <i class="fas fa-circle" v-else @click="goTo(i, jumbotron)"></i>
           </div>
         </li>
       </transition-group>
@@ -102,7 +102,7 @@
           <!-- sezione feedback - semplice - animazioni = slider -->
           <img :src="feedback.img" alt="">
           <transition-group name="slide" tag="ul" >
-            <li class="feedback_slide" :key="feedback"v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
+            <li class="feedback_slide" :key="feedback.id"v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
               <img class="feedback_img" :src="feedback.img" alt="">
               <p class="feedback_text">{{feedback.text}}</p>
               <span class="feedback_name">{{feedback.name}}</span>
@@ -110,8 +110,8 @@
             </li>
           </transition-group >
           <div class="slider_dots_feedback">
-            <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks" v-if="feedback.visible"></i>
-            <i class="fas fa-circle" v-else></i>
+            <i class="far fa-dot-circle" v-for="(feedbackDot,i) in feedback.feedbacks" v-if="feedbackDot.visible"></i>
+            <i class="fas fa-circle" v-else @click="goTo(i, feedback.feedbacks)"></i>
           </div>
         </div >
 
@@ -144,8 +144,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a, beatae aut ipsam praesentium id quo temporibus qui rem. Officiis molestias omnis sapiente accusamus iure, quidem mollitia quasi! Vitae eligendi accusamus, nostrum ad minima hic.</p>
           </div>
           <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
-          <div class="course_card_wrap">
-            <div class="course_card" v-for="course in courses" v-if="course.visible">
+          <transition-group name="slide_course" tag="ul" class="course_card_wrap">
+            <li class="course_card" :key="course.id" v-for="course in courses" v-if="course.visible">
               <img :src="course.img" alt="">
               <div class="course_card_content">
                 <div class="course_wrap">
@@ -159,8 +159,8 @@
                   <i class="fas fa-tag"> {{course.category}}</i>
                 </span>
               </div>
-            </div>
-          </div>
+            </li>
+          </transition-group>
           <!-- CREARE PALLINI INDICE -->
         </section>
 

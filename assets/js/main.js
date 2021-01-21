@@ -21,6 +21,7 @@ let app = new Vue({
         button: true,
         buttonText: 'register now',
         img: 'assets/img/people/h5-slide-3-background.jpg',
+        id:123
       },
       {
         visible: false,
@@ -29,6 +30,8 @@ let app = new Vue({
         button: false,
         buttonText: 'register now',
         img: 'assets/img/people/h5-slide-2-background.jpg',
+        id:23
+
       },
       {
         visible: false,
@@ -37,6 +40,8 @@ let app = new Vue({
         button: true,
         buttonText: 'register now',
         img: 'assets/img/people/h5-slide-1-background.jpg',
+        id:1234
+
       }
 
     ],
@@ -106,6 +111,8 @@ let app = new Vue({
           text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
           name:'Johan Collins',
           job:'student',
+          id:12343534
+
         },
         {
           visible: false,
@@ -113,6 +120,7 @@ let app = new Vue({
           text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
           name:'Johan Collins',
           job:'student',
+          id:1238798798
         },
         {
           visible: false,
@@ -120,6 +128,7 @@ let app = new Vue({
           text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
           name:'Johan Collins',
           job:'student',
+          id:7867888887
         },
       ],
     },
@@ -199,6 +208,7 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:1238678678678
       },
       {
         visible: true,
@@ -212,6 +222,7 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:12309020302930
       },
       {
         visible: true,
@@ -225,6 +236,7 @@ let app = new Vue({
         },
         partecipants: 4,
         category:'business',
+        id:4095830879878
       },
       {
         visible: false,
@@ -238,6 +250,7 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:1235464560459960459
       },
       {
         visible: false,
@@ -251,6 +264,7 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:938429304233498320
       },
       {
         visible: false,
@@ -264,6 +278,7 @@ let app = new Vue({
         },
         partecipants: 4,
         category:'business',
+        id:34853940088988989090
       },
       {
         visible: false,
@@ -277,6 +292,7 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:324234479267678678786
       },
       {
         visible: false,
@@ -290,6 +306,8 @@ let app = new Vue({
         },
         partecipants: 1,
         category:'programming',
+        id:3242344792676786
+
       },
       {
         visible: false,
@@ -303,6 +321,8 @@ let app = new Vue({
         },
         partecipants: 4,
         category:'business',
+        id:3242344
+
       }
     ],
     // 8# PICING OBJECT-database
@@ -491,7 +511,13 @@ let app = new Vue({
         e.visible = false;
       });
       app.learning[index].visible = true;
-    }
+    },
+    goTo: function(index, array){
+      array.forEach(e=>{
+        e.visible = false;
+      });
+      array[index].visible = true;
+    },
     ////////////////////////////////////////
     // ????????????????????????????????
     /////////////////////////////////////////////
