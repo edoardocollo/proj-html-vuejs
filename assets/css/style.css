@@ -5,7 +5,7 @@
 }
 
 #app{
-  width: 1200px;
+  /* width: 1200px; */
   margin: auto;
   color: #303030;
   font-size: 18px;
@@ -15,10 +15,11 @@
 header {
   position: fixed;
   top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  /* width: 1200px; */
   color: white;
   padding: 30px 40px;
   z-index: 100;
@@ -53,9 +54,11 @@ main{
 /* JUMBOTRON */
 #jumbotron {
   height: 680px;
+  overflow: hidden;
+  z-index: 1000;
 }
 #jumbotron img {
-  height: 680px;
+
 }
 .slide {
   position: relative;
@@ -63,6 +66,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   overflow: hidden;
 }
 .slide_wrap {
@@ -117,6 +121,7 @@ main{
   font-weight: 600;
   background-color: #f2f8fc;
   border: 1px solid #f2f2f2;
+  z-index: -1;
 }
 .topic_card img {
   width: 60px;
@@ -136,7 +141,6 @@ main{
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 780px;
 }
 .trusted_box h2 {
   font-size: 35px;
@@ -151,11 +155,15 @@ main{
   text-transform: uppercase;
   color: #40c4ff;
 }
-.trusted_box img{
+.trusted_wrap {
   position: absolute;
-  bottom: 0;
+}
+.trusted_box img{
+  /* position: absolute; */
+
+  /* bottom: 0; */
   align-self: center;
-  width: 100%;
+  width: 90%;
   z-index: -10;
 }
 
@@ -167,8 +175,6 @@ main{
 }
 .empowering_box {
   display: flex;
-  height: 400px;
-
 }
 .empowering_content {
   display: flex;
@@ -207,7 +213,7 @@ main{
 /* FEEDBACK */
 #feedback {
   position: relative;
-  height: 550px;
+  height: 600px;
   margin: 60px 0;
   overflow: hidden;
 }
@@ -269,7 +275,7 @@ main{
   align-items: center;
 }
 #learning_nav {
-  width: 70%;
+  width: 50%;
 }
 #learning_nav ul {
   list-style: none;
@@ -454,6 +460,7 @@ main{
   justify-content: center;
   align-items: center;
   height: 300px;
+  overflow: hidden;
 }
 
 
@@ -496,9 +503,6 @@ footer {
 .footer_column:last-child img {
   width: 250px;
 }
-.footer_column:last-child {
-  text-align: center;
-}
 #footer_bottom_box{
   display: flex;
   justify-content: space-between;
@@ -513,3 +517,15 @@ footer {
   color: #cecece;
 }
 /* ???????????????????????????????? */
+
+
+
+
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

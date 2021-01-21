@@ -8,7 +8,6 @@
   <title>proj-html-vuejs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;800;900&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -31,10 +30,12 @@
       </header>
 
 
-      <div id="jumbotron">
-        <!-- slider   -->
-        <div class="slide" v-for="slide in jumbotron" v-if="slide.visible">
-          <img :src="slide.img" alt="">
+      <div id="jumbotron" @mouseleave="carouselJumbotron()" @mouseenter="stopCarouselJumbotron">
+        <!-- <div class="screen">
+
+        </div> -->
+        <div class="slide" v-for="slide in jumbotron" v-if="slide.visible" >
+          <img class="slide_img" :src="slide.img" alt="">
           <div class="slide_wrap">
             <h2>{{slide.title}}</h2>
             <p>{{slide.text}}</p>
@@ -64,10 +65,12 @@
         <section id="trusted">
           <!-- sezione trusted name - semplice - animazioni? -->
           <div class="trusted_box" v-for="el in trusted">
-            <h2>{{el.title}}</h2>
-            <p>{{el.text}}</p>
-            <a href="" v-if="el.link">{{el.linkText}}</a>
-            <img :src="el.img" alt="">
+            <div class="trusted_wrap">
+              <h2 class="trusted_title">{{el.title}}</h2>
+              <p class="trusted_text">{{el.text}}</p>
+              <a href="" class="trusted_button" v-if="el.link" >{{el.linkText}}</a>
+            </div>
+            <img class="trusted_img":src="el.img" alt="">
           </div>
         </section>
 
@@ -92,12 +95,12 @@
 
 
 
-        <section id="feedback">
+        <section id="feedback" @mouseover="stopCarouselFeedback()" @mouseleave="carouselFeedback()">
           <!-- sezione feedback - semplice - animazioni = slider -->
           <img :src="feedback.img" alt="">
           <div class="feedback_slide" v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
             <img class="feedback_img" :src="feedback.img" alt="">
-            <p>{{feedback.text}}</p>
+            <p class="feedback_text">{{feedback.text}}</p>
             <span class="feedback_name">{{feedback.name}}</span>
             <span class="feedback_job">{{feedback.job}}</span>
           </div>
@@ -123,16 +126,16 @@
               <ul v-if="el.tips">
                 <li v-for="tip in el.tipsItem"><i class="fas fa-check"></i>{{tip}}</li>
               </ul>
-              <img :src="el.img" alt="">
+              <img class="learning_img" :src="el.img" alt="">
             </div>
           </div>
         </section>
 
 
 
-        <section id="courses">
+        <section id="courses"  @mouseleave="carouselCourse()" @mouseenter="stopCarouselCourse()">
           <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
-          <div class="course_card" v-for="course in courses">
+          <div class="course_card" v-for="course in courses" v-if="course.visible">
             <img :src="course.img" alt="">
             <div class="course_card_content">
               <div class="course_wrap">
@@ -247,6 +250,8 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js" charset="utf-8"></script>
 </body>
 

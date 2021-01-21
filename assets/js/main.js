@@ -1,6 +1,9 @@
 let app = new Vue({
   el:'#app',
   data:{
+    carouselCounter: 0,
+    carouselCounterFeed: 0,
+    carouselCounterCourse: 2,
     // DATABASES
     /////////////////////////////////////////
     // 0# HEADER OBJECT-database
@@ -10,8 +13,8 @@ let app = new Vue({
       icons:['fas fa-search','far fa-clipboard','fas fa-bars'],
     },
     // 1# JUMBOTRON OBJECT-database
-    jumbotron:{
-      slide1:{
+    jumbotron:[
+      {
         visible: true,
         title: 'Contemporary Ideas',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -19,24 +22,24 @@ let app = new Vue({
         buttonText: 'register now',
         img: 'assets/img/people/h5-slide-3-background.jpg',
       },
-      slide2:{
+      {
         visible: false,
         title: 'Contemporary Ideas',
         text: 'blablablablabla',
-        button: true,
+        button: false,
         buttonText: 'register now',
-        img: 'assets/img/people/h5-slide-3-background.jpg',
+        img: 'assets/img/people/h5-slide-2-background.jpg',
       },
-      slide3:{
+      {
         visible: false,
         title: 'Contemporary Ideas',
-        text: 'blablablablabla',
+        text: '',
         button: true,
         buttonText: 'register now',
-        img: 'assets/img/people/h5-slide-3-background.jpg',
-      },
+        img: 'assets/img/people/h5-slide-1-background.jpg',
+      }
 
-    },
+    ],
     // 2# TOPIC OBJECT-database
     topics:[
       {
@@ -185,6 +188,7 @@ let app = new Vue({
     // 7# POPULAR COURSE OBJECT-database
     courses:[
       {
+        visible: true,
         img:'assets/img/course/course-5-f-img.jpg',
         title:'Android Developer',
         teacher:'David Sanders',
@@ -197,6 +201,7 @@ let app = new Vue({
         category:'programming',
       },
       {
+        visible: true,
         img:'assets/img/course/course-6-f-img.jpg',
         title:'Web Designing',
         teacher:'Jennifer Powell',
@@ -209,6 +214,7 @@ let app = new Vue({
         category:'programming',
       },
       {
+        visible: true,
         img:'assets/img/course/course-12-f-img.jpg',
         title:'Financial Modeling',
         teacher:'Edward Bowman',
@@ -220,6 +226,84 @@ let app = new Vue({
         partecipants: 4,
         category:'business',
       },
+      {
+        visible: false,
+        img:'assets/img/course/course-5-f-img.jpg',
+        title:'Android Developer',
+        teacher:'David Sanders',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        visible: false,
+        img:'assets/img/course/course-6-f-img.jpg',
+        title:'Web Designing',
+        teacher:'Jennifer Powell',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        visible: false,
+        img:'assets/img/course/course-12-f-img.jpg',
+        title:'Financial Modeling',
+        teacher:'Edward Bowman',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'blue',
+          text: '$20'
+        },
+        partecipants: 4,
+        category:'business',
+      },
+      {
+        visible: false,
+        img:'assets/img/course/course-5-f-img.jpg',
+        title:'Android Developer',
+        teacher:'David Sanders',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        visible: false,
+        img:'assets/img/course/course-6-f-img.jpg',
+        title:'Web Designing',
+        teacher:'Jennifer Powell',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'yellow',
+          text: 'free'
+        },
+        partecipants: 1,
+        category:'programming',
+      },
+      {
+        visible: false,
+        img:'assets/img/course/course-12-f-img.jpg',
+        title:'Financial Modeling',
+        teacher:'Edward Bowman',
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
+        badge:{
+          color: 'blue',
+          text: '$20'
+        },
+        partecipants: 4,
+        category:'business',
+      }
     ],
     // 8# PICING OBJECT-database
     pricing:{
@@ -336,11 +420,208 @@ let app = new Vue({
 
   },
   methods:{
+    nextJumbotron: function(i){
+      if (app.carouselCounter == app.jumbotron.length - 1) {
+        app.jumbotron[app.carouselCounter].visible = false;
+        app.jumbotron[0].visible = true;
+        app.carouselCounter = 0;
+
+      }else{
+        app.jumbotron[app.carouselCounter].visible = false;
+        app.carouselCounter++;
+        app.jumbotron[app.carouselCounter].visible = true;
+      }
+    },
+    carouselJumbotron: function(){
+      jumbotronInterval = setInterval(function () {
+        app.nextJumbotron();
+      }, 2500);
+    },
+    stopCarouselJumbotron: function(){
+      clearInterval(jumbotronInterval);
+    },
+    nextFeedback: function(){
+      if (app.carouselCounterFeed == app.feedback.feedbacks.length - 1) {
+        app.feedback.feedbacks[app.carouselCounterFeed].visible = false;
+        app.feedback.feedbacks[0].visible = true;
+        app.carouselCounterFeed = 0;
+
+      }else{
+        app.feedback.feedbacks[app.carouselCounterFeed].visible = false;
+        app.carouselCounterFeed++;
+        app.feedback.feedbacks[app.carouselCounterFeed].visible = true;
+      }
+
+    },
+    carouselFeedback: function(){
+      feedbackInterval = setInterval(function () {
+        app.nextFeedback();
+      }, 2500);
+    },
+    stopCarouselFeedback: function(){
+      clearInterval(feedbackInterval);
+    },
+    nextCourse: function(){
+        app.courses[0].visible = false;
+        app.courses.push(app.courses.shift())
+        app.courses[2].visible = true;
+    },
+    carouselCourse: function(){
+      courseInterval = setInterval(function () {
+        app.nextCourse();
+      }, 2500);
+    },
+    stopCarouselCourse: function(){
+      clearInterval(courseInterval);
+    },
+
+
     ////////////////////////////////////////
     // ????????????????????????????????
     /////////////////////////////////////////////
   },
   mounted(){
+    this.carouselJumbotron();
+    this.carouselFeedback();
+    this.carouselCourse();
 
   },
+});
+
+gsap.from('.topic_card',{
+  y:-200,
+  duration:3
+});
+gsap.from('.trusted_title',{
+  scrollTrigger:{
+    trigger:'.trusted_title',
+    toggleActions: 'restart none reverse none',
+    start: '0 50%',
+    end:'0 50%',
+    toggleActions: 'restart none reverse none'
+  },
+  x: -2000,
+  duration: 2.5
+});
+gsap.from('.trusted_text',{
+  scrollTrigger:{
+    trigger:'.trusted_text',
+    start: '0 50%',
+    end:'0 50%',
+    toggleActions: 'restart none reverse none'
+  },
+  x: 2000,
+  delay: .5,
+  duration: 2.5
+});
+gsap.from('.trusted_button',{
+  scrollTrigger:{
+    trigger:'.trusted_button',
+    start: '0 50%',
+    end:'0 50%',
+    toggleActions: 'restart none reverse none'
+  },
+  opacity: 0,
+  delay: 2.5,
+  duration: 3
+});
+gsap.from('.trusted_img',{
+  scrollTrigger:{
+    trigger:'.trusted_img',
+    start: '-1000px 50%',
+    end:'-1000px 50%',
+    toggleActions: 'restart none reverse none'
+  },
+  x: 2000,
+  y:1000,
+  opacity: 0,
+  duration: 2.5
+});
+gsap.from('.empowering_img',{
+  scrollTrigger:{
+    trigger:'.empowering_img',
+    toggleActions: 'restart none reverse none',
+    start: '-1200px 50%',
+    end:'-1200px 50%'
+  },
+  y: 1000,
+  duration: 2.5
+});
+gsap.from('.empowering_content',{
+  scrollTrigger:{
+    trigger:'.empowering_content',
+    toggleActions: 'restart none reverse none',
+    toggleActions: 'restart none reverse none',
+    start: '100px 50%',
+    end:'100px 50%'
+
+  },
+  x: 2000,
+  duration: 2.5
+});
+gsap.from('.feedback_img',{
+  scrollTrigger:{
+    trigger:'.feedback_img',
+    toggleActions: 'restart none reverse none',
+  },
+  height: 0,
+  duration: 2.5
+});
+gsap.from('.feedback_text',{
+  scrollTrigger:{
+    trigger:'.feedback_text',
+    toggleActions: 'restart none none none'
+  },
+  opacity: 0,
+  duration: 3
+});
+gsap.from('.feedback_name',{
+  scrollTrigger:{
+    trigger:'.feedback_name',
+    toggleActions: 'restart none none none'
+  },
+  opacity: 0,
+  duration: 3,
+  delay: .5
+});
+gsap.from('.feedback_job',{
+  scrollTrigger:{
+    trigger:'.feedback_job',
+    toggleActions: 'restart none none none'
+  },
+  opacity: 0,
+  duration: 3,
+  delay: 1,
+});
+gsap.from('.learning_img',{
+  scrollTrigger:{
+    trigger:'.learning_img',
+    toggleActions: 'restart none reverse none',
+    start: '-200px 50%',
+    end:'-200px 50%'
+
+  },
+  x: 1000,
+  duration: 3
+});
+gsap.from('.price_column',{
+  scrollTrigger:{
+    trigger:'.price_column',
+    toggleActions: 'restart none reverse none',
+    start: '100px 50%',
+    end:'100px 50%'
+  },
+  x:1500,
+  rotationY: 360,
+  duration: 3
+});
+gsap.from('#partners_wrap',{
+  scrollTrigger:{
+    trigger:'.partners_wrap',
+    toggleActions: 'restart none reverse none',
+    start: '5700 50%',
+    end:'5700 50%'
+  },
+  y: 300,
+  duration: 3
 });
