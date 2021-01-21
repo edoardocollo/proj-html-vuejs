@@ -474,8 +474,18 @@ let app = new Vue({
     stopCarouselCourse: function(){
       clearInterval(courseInterval);
     },
+    toTop: function(){
+      let scrollPosition = document.documentElement.scrollTop;
+      toTopInterval = setInterval(function () {
+        scrollPosition -= 10;
+        document.documentElement.scrollTop = scrollPosition;
+        console.log(scrollPosition);
+        if (scrollPosition <= 0) {
+          clearInterval(toTopInterval);
+        }
+      }, 10);
 
-
+    },
     ////////////////////////////////////////
     // ????????????????????????????????
     /////////////////////////////////////////////
@@ -487,7 +497,18 @@ let app = new Vue({
 
   },
 });
+gsap.to('header',{
+  scrollTrigger:{
+    trigger:'.header',
+    toggleActions: 'restart none reverse none',
+    markers:true,
+    start: '60px 0',
+    end:'60px 0',
+  },
+  backgroundColor: '#40c4ff',
+  height: '60px',
 
+});
 gsap.from('.topic_card',{
   y:-200,
   duration:3
