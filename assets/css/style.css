@@ -212,7 +212,7 @@ header img {
 .statistics_wrap {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 300%;
 }
 .statistic {
   display: flex;
@@ -609,4 +609,11 @@ footer {
 }
 .slide_course-enter{
   opacity:0;
+}
+
+@media all and (max-width: 1200px) {
+  .trusted_wrap {
+    position: relative;
+  }
+
 }
