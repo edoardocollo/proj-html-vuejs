@@ -14,7 +14,10 @@
 <body>
   <div id="app">
     <div class="container">
-      <button id="to_top" @click="toTop()">to top</button>
+      <button id="to_top" @click="toTop()">
+        <i class="fas fa-chevron-up"></i>
+        <span>top</span>
+      </button>
 
       <header>
         <!-- logo 1 nav -->
@@ -30,11 +33,11 @@
       </header>
 
 
-      <div id="jumbotron" @mouseleave="carouselJumbotron()" @mouseenter="stopCarouselJumbotron">
+      <transition-group name="slide" tag="ul" id="jumbotron" @mouseleave="carouselJumbotron()" @mouseenter="stopCarouselJumbotron">
         <!-- <div class="screen">
 
         </div> -->
-        <div class="slide" v-for="slide in jumbotron" v-if="slide.visible" >
+        <li class="slide" v-for="slide in jumbotron" v-bind:key="slide" v-if="slide.visible" >
           <img class="slide_img" :src="slide.img" alt="">
           <div class="slide_wrap">
             <h2>{{slide.title}}</h2>
@@ -45,8 +48,8 @@
             <i class="far fa-dot-circle" v-for="slide in jumbotron" v-if="slide.visible"></i>
             <i class="fas fa-circle" v-else></i>
           </div>
-        </div>
-      </div>
+        </li>
+      </transition-group>
 
 
       <main>
@@ -95,20 +98,22 @@
 
 
 
-        <section id="feedback" @mouseover="stopCarouselFeedback()" @mouseleave="carouselFeedback()">
+        <div id="feedback" @mouseover="stopCarouselFeedback()" @mouseleave="carouselFeedback()">
           <!-- sezione feedback - semplice - animazioni = slider -->
           <img :src="feedback.img" alt="">
-          <div class="feedback_slide" v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
-            <img class="feedback_img" :src="feedback.img" alt="">
-            <p class="feedback_text">{{feedback.text}}</p>
-            <span class="feedback_name">{{feedback.name}}</span>
-            <span class="feedback_job">{{feedback.job}}</span>
-          </div>
+          <transition-group name="slide" tag="ul" >
+            <li class="feedback_slide" :key="feedback"v-for="feedback in feedback.feedbacks" v-if="feedback.visible">
+              <img class="feedback_img" :src="feedback.img" alt="">
+              <p class="feedback_text">{{feedback.text}}</p>
+              <span class="feedback_name">{{feedback.name}}</span>
+              <span class="feedback_job">{{feedback.job}}</span>
+            </li>
+          </transition-group >
           <div class="slider_dots_feedback">
             <i class="far fa-dot-circle" v-for="feedback in feedback.feedbacks" v-if="feedback.visible"></i>
             <i class="fas fa-circle" v-else></i>
           </div>
-        </section>
+        </div >
 
 
 
@@ -117,14 +122,14 @@
           <div id="learning_wrap">
             <nav id="learning_nav">
               <ul>
-                <li v-for="el in learning">{{el.buttonName}}</li>
+                <li v-for="(el, i ) in learning" @click="selectLearning(i)" :class="`${el.visible}_learning`">{{el.buttonName}} </li>
               </ul>
             </nav>
             <div class="learning_content" v-for="el in learning" v-if="el.visible">
               <h2>{{el.title}}</h2>
               <p>{{el.text}}</p>
               <ul v-if="el.tips">
-                <li v-for="tip in el.tipsItem"><i class="fas fa-check"></i>{{tip}}</li>
+                <li v-for="tip in el.tipsItem" ><i class="fas fa-check"></i>{{tip}}</li>
               </ul>
               <img class="learning_img" :src="el.img" alt="">
             </div>
@@ -134,43 +139,59 @@
 
 
         <section id="courses"  @mouseleave="carouselCourse()" @mouseenter="stopCarouselCourse()">
+          <div class="title_wrap">
+            <h2>Popular Online Courses</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a, beatae aut ipsam praesentium id quo temporibus qui rem. Officiis molestias omnis sapiente accusamus iure, quidem mollitia quasi! Vitae eligendi accusamus, nostrum ad minima hic.</p>
+          </div>
           <!-- sezione popular - medio/alta - struttura card/carosello - animazioni = transition -->
-          <div class="course_card" v-for="course in courses" v-if="course.visible">
-            <img :src="course.img" alt="">
-            <div class="course_card_content">
-              <div class="course_wrap">
-                <h3>{{course.title}}</h3>
-                <div class="course_badge" :class="`badge_${course.badge.color}`">{{course.badge.text}}</div>
+          <div class="course_card_wrap">
+            <div class="course_card" v-for="course in courses" v-if="course.visible">
+              <img :src="course.img" alt="">
+              <div class="course_card_content">
+                <div class="course_wrap">
+                  <h3>{{course.title}}</h3>
+                  <div class="course_badge" :class="`badge_${course.badge.color}`">{{course.badge.text}}</div>
+                </div>
+                <span class="teacher">{{course.teacher}}</span>
+                <p>{{course.text}}</p>
+                <span class="card_footer">
+                  <i class="fas fa-user"> {{course.partecipants}}</i>
+                  <i class="fas fa-tag"> {{course.category}}</i>
+                </span>
               </div>
-              <span class="teacher">{{course.teacher}}</span>
-              <p>{{course.text}}</p>
-              <span class="card_footer">
-                <i class="fas fa-user"> {{course.partecipants}}</i>
-                <i class="fas fa-tag"> {{course.category}}</i>
-              </span>
             </div>
           </div>
           <!-- CREARE PALLINI INDICE -->
         </section>
 
 
-
         <section id="price">
-          <!-- sezione pricing - media - struttura griglia - animazioni = active -->
-          <div class="index_column">
-            <span v-for="el in pricing.index">{{el}}</span>
+          <div class="title_wrap">
+
+            <h2>Pricing Plans</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dicta id omnis praesentium perferendis ullam nulla dolores fugiat in consectetur eos, quo sapiente alias minus?</p>
           </div>
-          <div class="price_column" v-for="price in pricing.prices">
-            <div class="price_wrap">
-              <img :src="price.img" alt="">
-              <h3>{{price.type}}</h3>
-              <span>{{price.price}}</span>
+          <!-- sezione pricing - media - struttura griglia - animazioni = active -->
+          <div class="column_vrap">
+            <div class="index_column">
+              <span v-for="el in pricing.index">{{el}}</span>
             </div>
-            <span>{{price.courses}}</span>
-            <span>{{price.days}}</span>
-            <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
-            <i class="fas fa-times" v-else></i>
-            <span class="price_button_span"><button class="price_button">Get it now</button></span>
+            <div class="price_column" v-for="price in pricing.prices">
+              <div class="price_wrap">
+                <img :src="price.img" alt="">
+                <h3>{{price.type}}</h3>
+                <span>{{price.price}}</span>
+              </div>
+              <span>{{price.courses}}</span>
+              <span>{{price.days}}</span>
+              <i class="fas fa-check" v-for="service in price.services" v-if="service"></i>
+              <i class="fas fa-times" v-else></i>
+              <span class="price_button_span"><button class="price_button">Get it now</button></span>
+            </div>
+            <div class="button_aside_wrap">
+              <div id="cart"><i class="fas fa-shopping-cart"></i></div>
+              <div id="price_side"><i class="fas fa-chart-pie"></i></div>
+            </div>
           </div>
         </section>
 

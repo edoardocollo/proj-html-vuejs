@@ -10,12 +10,20 @@
   color: #303030;
   font-size: 18px;
   overflow: hidden;
+  background-image: url('../img/background-pattern.jpg');
 }
 #to_top{
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 2000;
+  text-transform: uppercase;
+  background-color: #40c4ff;
+  color: white;
+  border: 0;
+  padding: 10px;
+  z-index: 1000;
 }
 
 /* HEADER */
@@ -52,9 +60,6 @@ header img {
 }
 
 /* MAIN */
-main{
-  padding: 0 40px;
-}
 
 
 
@@ -63,6 +68,7 @@ main{
   height: 680px;
   overflow: hidden;
   z-index: 1000;
+  list-style: none;
 }
 #jumbotron img {
 
@@ -116,7 +122,9 @@ main{
 #topics {
   display: flex;
   justify-content: space-between;
-  margin: 60px 0;
+  padding: 60px 40px;
+  background-color: white;
+  overflow: hidden;
 }
 .topic_card {
   display: flex;
@@ -128,7 +136,6 @@ main{
   font-weight: 600;
   background-color: #f2f8fc;
   border: 1px solid #f2f2f2;
-  z-index: -1;
 }
 .topic_card img {
   width: 60px;
@@ -141,8 +148,9 @@ main{
 
 /* TRUSTED */
 #trusted {
-  margin: 100px 0;
+  padding: 100px 40px;
   color: #595959;
+  background-color: white;
 }
 .trusted_box {
   position: relative;
@@ -156,6 +164,7 @@ main{
 }
 .trusted_box p {
   margin: 30px 0;
+
 }
 .trusted_box a {
   text-decoration: none;
@@ -164,6 +173,7 @@ main{
 }
 .trusted_wrap {
   position: absolute;
+  z-index: 10;
 }
 .trusted_box img{
   /* position: absolute; */
@@ -171,14 +181,14 @@ main{
   /* bottom: 0; */
   align-self: center;
   width: 90%;
-  z-index: -10;
 }
 
 
 /* EMPOWERING */
 #empowering {
   color: #595959;
-
+  background-color: white;
+  padding: 10px 40px;
 }
 .empowering_box {
   display: flex;
@@ -220,8 +230,8 @@ main{
 /* FEEDBACK */
 #feedback {
   position: relative;
-  height: 600px;
-  margin: 60px 0;
+  height: 800px;
+  padding: 60px 0;
   overflow: hidden;
 }
 #feedback > img {
@@ -273,8 +283,9 @@ main{
 
 /* LEARNING */
 #learning {
-  margin: 60px 0;
+  padding: 60px 40px;
   color: #847b7b;
+  background-color: white;
 }
 #learning_wrap {
   height: 750px;
@@ -293,6 +304,12 @@ main{
   padding-left: 20px;
   font-weight: 600;
 
+}
+#learning_nav ul li:hover{
+  border-left: 4px solid #40C4FF;
+}
+.true_learning{
+  border-left: 4px solid #40C4FF !important;
 }
 .learning_content {
   position: relative;
@@ -328,12 +345,17 @@ main{
 /* COURSES */
 #courses {
   display: flex;
+  flex-direction: column;
+  margin: 60px 40px;
+}
+.course_card_wrap {
+  display: flex;
   justify-content: space-between;
-  margin: 60px 0;
 }
 .course_card {
   width: 32%;
   border: 1px solid #f2f2f2;
+  background-color: white;
 }
 .course_card img {
   width: 100%;
@@ -384,8 +406,22 @@ main{
 /* PRICE */
 #price {
   display: flex;
-  margin: 60px 0;
+  flex-direction: column;
+  margin: 60px 40px;
   color: #808080;
+  position: relative;
+}
+.column_vrap {
+  display: flex;
+}
+.title_wrap {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.title_wrap h2 {
+  font-size: 40px;
+  margin: 30px;
+  color: #3e3e3e;
 }
 .index_column,
 .price_column {
@@ -393,6 +429,7 @@ main{
   flex-direction: column;
   align-items: center;
   width: 25%;
+  background-color: white;
 }
 .price_wrap {
   display: flex;
@@ -405,6 +442,9 @@ main{
   border: 1px solid #f2f2f2;
   color: #3e3e3e;
   border-top: 4px solid #d6f2ff;
+}
+.price_column:hover .price_wrap{
+  border-top: 4px solid #40c4ff;
 }
 .price_wrap h3 {
   padding: 15px;
@@ -458,6 +498,31 @@ main{
   font-weight: 600;
   color: #808080;
 
+}
+.price_column:hover .price_button{
+  background-color: #40c4ff;
+  color:white;
+}
+
+.button_aside_wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: -40px;
+}
+.button_aside_wrap div {
+  font-size: 18px;
+  padding: 10px;
+}
+.button_aside_wrap div:first-child {
+  color: white;
+  background-color: #ef2853;
+}
+.button_aside_wrap div:last-child {
+  color: #ef2853;
+  background-color: white;
+  border: 1px solid #efefef;
 }
 
 
@@ -530,9 +595,11 @@ footer {
 
 
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.slide-enter,
+.list-leave-to {
+  opacity : 0;
 }

@@ -146,7 +146,7 @@ let app = new Vue({
         tips: true,
         tipsItem:['lorem','lorem','lorem','lorem'],
         buttonName: 'Degree Programme',
-        img:'assets/img/icons/h12-tabs-icon-1.png',
+        img:'assets/img/icons/h12-tabs-icon-2.png',
       },
       {
         visible: false,
@@ -155,7 +155,7 @@ let app = new Vue({
         tips: true,
         tipsItem:['lorem','lorem','lorem','lorem'],
         buttonName: 'Career Achievements',
-        img:'assets/img/icons/h12-tabs-icon-1.png',
+        img:'assets/img/icons/h12-tabs-icon-3.png',
       },
       {
         visible: false,
@@ -164,7 +164,7 @@ let app = new Vue({
         tips: true,
         tipsItem:['lorem','lorem','lorem','lorem'],
         buttonName: 'Personal Management',
-        img:'assets/img/icons/h12-tabs-icon-1.png',
+        img:'assets/img/icons/h12-tabs-icon-4.png',
       },
       {
         visible: false,
@@ -173,7 +173,7 @@ let app = new Vue({
         tips: true,
         tipsItem:['lorem','lorem','lorem','lorem'],
         buttonName: 'Steps To Success',
-        img:'assets/img/icons/h12-tabs-icon-1.png',
+        img:'assets/img/icons/h12-tabs-icon-5.png',
       },
       {
         visible: false,
@@ -182,14 +182,14 @@ let app = new Vue({
         tips: true,
         tipsItem:['lorem','lorem','lorem','lorem'],
         buttonName: 'Knowledge Transfer',
-        img:'assets/img/icons/h12-tabs-icon-1.png',
+        img:'assets/img/icons/h12-tabs-icon-6.png',
       },
     ],
     // 7# POPULAR COURSE OBJECT-database
     courses:[
       {
         visible: true,
-        img:'assets/img/course/course-5-f-img.jpg',
+        img:'assets/img/course/course-1-f-img.jpg',
         title:'Android Developer',
         teacher:'David Sanders',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -202,7 +202,7 @@ let app = new Vue({
       },
       {
         visible: true,
-        img:'assets/img/course/course-6-f-img.jpg',
+        img:'assets/img/course/course-2-f-img.jpg',
         title:'Web Designing',
         teacher:'Jennifer Powell',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -215,7 +215,7 @@ let app = new Vue({
       },
       {
         visible: true,
-        img:'assets/img/course/course-12-f-img.jpg',
+        img:'assets/img/course/course-3-f-img.jpg',
         title:'Financial Modeling',
         teacher:'Edward Bowman',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -228,7 +228,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-5-f-img.jpg',
+        img:'assets/img/course/course-4-f-img.jpg',
         title:'Android Developer',
         teacher:'David Sanders',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -241,7 +241,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-6-f-img.jpg',
+        img:'assets/img/course/course-5-f-img.jpg',
         title:'Web Designing',
         teacher:'Jennifer Powell',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -254,7 +254,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-12-f-img.jpg',
+        img:'assets/img/course/course-6-f-img.jpg',
         title:'Financial Modeling',
         teacher:'Edward Bowman',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -267,7 +267,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-5-f-img.jpg',
+        img:'assets/img/course/course-7-f-img.jpg',
         title:'Android Developer',
         teacher:'David Sanders',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -280,7 +280,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-6-f-img.jpg',
+        img:'assets/img/course/course-8-f-img.jpg',
         title:'Web Designing',
         teacher:'Jennifer Powell',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -293,7 +293,7 @@ let app = new Vue({
       },
       {
         visible: false,
-        img:'assets/img/course/course-12-f-img.jpg',
+        img:'assets/img/course/course-9-f-img.jpg',
         title:'Financial Modeling',
         teacher:'Edward Bowman',
         text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste expedita corporis excepturi exercitationem aliquam mollitia? Vel incidunt tenetur magnam natus doloremque iusto labore inventore illum modi, quis officia quibusdam quidem.',
@@ -435,7 +435,7 @@ let app = new Vue({
     carouselJumbotron: function(){
       jumbotronInterval = setInterval(function () {
         app.nextJumbotron();
-      }, 2500);
+      }, 5000);
     },
     stopCarouselJumbotron: function(){
       clearInterval(jumbotronInterval);
@@ -456,7 +456,7 @@ let app = new Vue({
     carouselFeedback: function(){
       feedbackInterval = setInterval(function () {
         app.nextFeedback();
-      }, 2500);
+      }, 5000);
     },
     stopCarouselFeedback: function(){
       clearInterval(feedbackInterval);
@@ -469,7 +469,7 @@ let app = new Vue({
     carouselCourse: function(){
       courseInterval = setInterval(function () {
         app.nextCourse();
-      }, 2500);
+      }, 5000);
     },
     stopCarouselCourse: function(){
       clearInterval(courseInterval);
@@ -486,6 +486,12 @@ let app = new Vue({
       }, 10);
 
     },
+    selectLearning: function(index){
+      app.learning.forEach(e=>{
+        e.visible = false;
+      });
+      app.learning[index].visible = true;
+    }
     ////////////////////////////////////////
     // ????????????????????????????????
     /////////////////////////////////////////////
@@ -501,7 +507,6 @@ gsap.to('header',{
   scrollTrigger:{
     trigger:'.header',
     toggleActions: 'restart none reverse none',
-    markers:true,
     start: '60px 0',
     end:'60px 0',
   },
